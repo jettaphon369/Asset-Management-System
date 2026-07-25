@@ -1,0 +1,65 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>F&B Asset Management</title><link rel="stylesheet" href="styles.css?v=3.3.0"></head><body>
+<div id="overlay"></div>
+<div class="app">
+<aside id="sidebar">
+  <div class="brand"><img src="chee-chan-logo.png" alt="Chee Chan"><div><b>CHEE CHAN</b><small>F&B Asset Management</small></div></div>
+  <button data-view="dashboard">🏠 แดชบอร์ด</button>
+  <button data-view="assets">🏢 ทรัพย์สิน</button>
+  <button data-view="counts">🧮 การตรวจนับ</button>
+  <button data-view="events">🛠️ ชำรุด / ซ่อม / PM</button>
+  <button data-view="reminders">⏰ การแจ้งเตือน</button>
+  <button data-view="writeoff">⚫ Write-off</button>
+  <button data-view="reports">📊 รายงาน</button>
+  <button data-view="profile">👤 โปรไฟล์</button>
+</aside>
+<main>
+<header><button id="menuBtn" aria-label="เปิดเมนู">☰</button><img class="toplogo" src="chee-chan-logo.png" alt="Chee Chan"><div class="headtitle"><h1 id="title">แดชบอร์ด</h1><small>Food & Beverage Department</small></div><button id="filterBtn" class="headerFilter" aria-label="ตัวกรองข้อมูล">⌕<span>ตัวกรอง</span></button></header>
+
+<section id="dashboard" class="view active">
+  <div class="hero" id="hero"><img id="heroImg" alt="Chee Chan"><div class="heroShade"></div><div class="heroText"><span id="greeting">ยินดีต้อนรับ</span><h2>Captain A</h2><p>F&B Asset Management</p><blockquote>“ดูแลทรัพย์สินให้พร้อมบริการด้วยมาตรฐานระดับรีสอร์ต”</blockquote></div></div>
+  <div class="sectionHead"><h3 class="overviewTitle">ภาพรวมวันนี้</h3><button>ดูรายงาน</button></div>
+  <div class="kpis">
+    <div><i>▦</i><span>ทรัพย์สินทั้งหมด</span><b>1,248</b><small>+12 รายการเดือนนี้</small></div>
+    <div><i>฿</i><span>มูลค่ารวม</span><b>฿1,248,500</b><small>มูลค่าทรัพย์สินสะสม</small></div>
+    <div><i>✓</i><span>ใกล้กำหนด PM</span><b>12</b><small>ภายใน 30 วัน</small></div>
+    <div><i>⚒</i><span>ชำรุด / Spoil</span><b>18</b><small>รอดำเนินการ 5</small></div>
+    <div><i>⚙</i><span>กำลังซ่อม</span><b>7</b><small>อยู่ระหว่างดำเนินการ</small></div>
+    <div><i>☷</i><span>ยังไม่เคยตรวจนับ</span><b>23</b><small>ควรวางแผนตรวจนับ</small></div>
+    <div><i class="alertIcon">!</i><span>ส่วนต่างรอตรวจสอบ</span><b class="bad">-50</b><small>พบคืนแล้ว 20 ชิ้น</small></div>
+    <div><i>◉</i><span>Write-off สะสม</span><b>฿85,400</b><small>ตลอดอายุระบบ</small></div>
+  </div>
+  <div class="dashgrid">
+    <article><h3>ภาพรวมตาม Outlet</h3><p>Restaurant 568 · ชำรุด 6 · ส่วนต่าง -25</p><p>Main Kitchen 322 · ชำรุด 5 · ส่วนต่าง -10</p><p>Banquet 210 · ชำรุด 3 · ส่วนต่าง -5</p></article>
+    <article class="followPanel"><div class="panelTitle"><h3>งานที่ควรติดตาม</h3><small>เรียงตามความเร่งด่วน</small></div><div class="taskline urgent"><span></span><div><b>ตรวจนับ · ช้อนส้อม</b><small>Restaurant · เหลือ 3 วัน</small></div><em>ด่วน</em></div><div class="taskline"><span></span><div><b>PM · เครื่องทำน้ำแข็ง</b><small>Main Kitchen · เหลือ 15 วัน</small></div><em>PM</em></div><div class="taskline wait"><span></span><div><b>เปลี่ยนไส้กรอง</b><small>ตู้ทำน้ำแข็ง · รอดำเนินการ</small></div><em>รอ</em></div></article>
+    <article><h3>ทรัพย์สินล่าสุด</h3><p>ตู้ทำน้ำแข็ง · Main Kitchen</p><p>แอร์ Lobby · Lobby</p><p>ช้อนโต๊ะ Stainless · Restaurant</p></article>
+  </div>
+</section>
+
+<section id="assets" class="view"><article><h3>ทรัพย์สิน</h3><input placeholder="ค้นหา รหัส ชื่อ หมวดหมู่ สถานที่..."><div class="cards"><div>ตู้ทำน้ำแข็ง<br><small>AST-0002 · Main Kitchen</small></div><div>แอร์ Lobby<br><small>AST-0003 · Lobby</small></div><div>ช้อนโต๊ะ Stainless<br><small>CNT-0001 · Restaurant</small></div></div></article></section>
+<section id="counts" class="view"><div class="pageHead"><div><h2>การตรวจนับ</h2><p>ติดตามยอดนับจริงและส่วนต่าง</p></div><button class="primary">สแกน QR</button></div><article class="countCard"><h3>ช้อนโต๊ะ Stainless</h3><p>CNT-0001 · Restaurant</p><div class="countStats"><div><span>รับเข้า</span><b>300</b></div><div><span>นับจริง</span><b>250</b></div><div><span>ส่วนต่าง</span><b class="bad">-50</b></div></div><div class="progress"><span></span></div><small>ตรวจล่าสุด 30 ส.ค. 2565 โดย Captain A</small><div class="countBtns"><button class="primary">+ ตรวจนับ</button><button>ประวัติ</button><button>ติดตามส่วนต่าง</button></div></article></section>
+<section id="events" class="view"><div class="pageHead"><div><h2>ชำรุด / ซ่อม / PM</h2><p>สถานะงานและประวัติการดำเนินการ</p></div><button class="primary">+ บันทึกเหตุการณ์</button></div><div class="tabs"><button class="active">ทั้งหมด</button><button>รอดำเนินการ</button><button>กำลังซ่อม</button><button>เสร็จสิ้น</button></div><div class="eventList"><article><i>PM</i><div><b>PM · ตู้ทำน้ำแข็ง</b><p>ตรวจเช็กระบบและทำความสะอาด</p></div><span>เหลือ 15 วัน</span></article><article><i class="orange">⚒</i><div><b>ชำรุด · ตู้เย็น 2 ประตู</b><p>ประตูปิดไม่สนิท</p></div><span class="orangeText">รอดำเนินการ</span></article></div></section>
+<section id="reminders" class="view"><article><h3>การแจ้งเตือน</h3><div class="cards"><div>PM · แอร์ Lobby<br><small>เหลือ 39 วัน</small></div><div>เปลี่ยนไส้กรอง · ตู้ทำน้ำแข็ง<br><small>เหลือ 170 วัน</small></div></div></article></section>
+<section id="writeoff" class="view"><article><h3>Write-off</h3><div class="cards"><div>ยังไม่มีรายการ Write-off</div></div></article></section>
+<section id="reports" class="view"><article><h3>รายงาน</h3><div class="reportgrid"><button>ทรัพย์สินทั้งหมด</button><button>การตรวจนับ</button><button>ชำรุด / ซ่อม / PM</button><button>Reminder</button><button>Write-off</button><button>ตาม Outlet</button></div></article></section>
+<section id="profile" class="view"><article class="profileCard"><div class="profileAvatar">CA</div><h2>Captain A</h2><p>Food & Beverage · Captain</p><div class="profileStats"><div><b>12</b><span>งานเดือนนี้</span></div><div><b>5</b><span>แจ้งเตือน</span></div></div><button>งานของฉัน</button><button>สิทธิ์การใช้งาน</button><button>ตั้งค่า</button></article></section>
+</main>
+<nav class="bottom">
+<button data-view="dashboard">⌂<small>หน้าหลัก</small></button>
+<button data-view="counts">✓<small>ตรวจนับ</small></button>
+<button id="quick">＋<small>บันทึกใหม่</small></button>
+<button data-view="reminders">♢<small>แจ้งเตือน</small></button>
+<button data-view="profile">◯<small>โปรไฟล์</small></button>
+</nav>
+</div>
+<dialog id="filterDlg" class="filterDialog">
+  <form id="filterForm" class="filterSheet">
+    <div class="filterHead"><div><h3>ตัวกรองข้อมูล</h3><p>เลือกขอบเขตข้อมูลที่ต้องการแสดง</p></div><button type="button" id="closeFilter" aria-label="ปิด">✕</button></div>
+    <label>แผนก / Outlet<select id="filterOutlet"><option>Food & Beverage - ทั้งหมด</option><option>Restaurant</option><option>Main Kitchen</option><option>Banquet</option><option>Bar</option><option>Steward</option></select></label>
+    <label>ช่วงเวลา<select id="filterPeriod"><option>เดือนนี้</option><option>เดือนก่อน</option><option>ปีนี้</option><option>กำหนดเอง</option></select></label>
+    <div class="dateRange"><label>วันที่เริ่ม<input id="filterFrom" type="date"></label><label>วันที่สิ้นสุด<input id="filterTo" type="date"></label></div>
+    <button type="submit" class="applyFilter">ใช้งานตัวกรอง</button>
+    <button type="button" id="resetFilter" class="resetFilter">ล้างตัวกรอง</button>
+  </form>
+</dialog>
+<dialog id="quickDlg"><h3>บันทึกใหม่</h3><div class="quickgrid"><button>เพิ่มทรัพย์สิน</button><button>ตรวจนับ</button><button>ชำรุด / ซ่อม / PM</button><button>Reminder</button><button>Write-off</button></div><button id="closeQuick">ปิด</button></dialog>
+<script src="app.js?v=3.3.0"></script></body></html>
